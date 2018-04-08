@@ -1,8 +1,19 @@
+import sys,re,os
 from nltk.corpus import words
-import re
 from functools import reduce
 import pandas as pd
 import numpy as np
+
+
+class ThreeWordIndex:
+    def __init__(self):
+        pass
+
+    def cache_vocabulary(self):
+        pass
+
+
+
 
 r = re.compile(r'([a-zA-Z]).*?\1|oe|sc|kh')
 
