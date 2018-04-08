@@ -30,8 +30,8 @@ twi.generate_word_index()
 ```
 
 ## Quickstart
-TODO
-- Install the nltk word corpus with `nltk.download()`
+- Run `pip install human_word_indexes`
+- Install the nltk word corpuses with `nltk.download()`
 
 
 ## Motivation
