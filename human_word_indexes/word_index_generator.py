@@ -10,7 +10,7 @@ from nltk.corpus import words
 from functools import reduce
 import pandas as pd
 import numpy as np
-from word_index.word_index_filter import WordIndexFilter
+from human_word_indexes.word_index_filter import WordIndexFilter
 
 logger = logging.getLogger(__name__)
 
