@@ -14,7 +14,7 @@ from word_index.word_index_filter import WordIndexFilter
 
 logger = logging.getLogger(__name__)
 
-class WordIndex:
+class WordIndexGenerator:
     def __init__(self, length, word_count=3, word_filter ='default',sort=True,sep='.'):
         '''
         Create an instance of a Word Index, NLTK corpuses must be installed with the nltk.download() function
