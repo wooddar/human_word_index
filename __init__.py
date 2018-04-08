@@ -1,1 +1,1 @@
-from .word_index.word_index_generator import WordIndexGenerator
+from .human_word_indexes.word_index_generator import WordIndexGenerator
