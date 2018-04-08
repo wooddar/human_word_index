@@ -9,7 +9,7 @@ setup(
     download_url='https://github.com/wooddar/human_word_indexes/archive/0.1.tar.gz',
     license='MIT',
     author='hugodarwood',
-    author_email='',
+    author_email='hugodarwood@gmail.com',
     description='A Package to generate human readable indexes for Pandas DataFrames or other data',
     install_requires=['numpy','pandas','nltk']
 )
