@@ -35,10 +35,12 @@ class WordIndex:
                 raise ValueError('Please specify a valid WordIndexFilter class')
             self.word_filter = word_filter.filter_word
         logger.info('Building index vocabulary')
-        self._build_vocabulary()
+        self._max_records = None
         self._length = length
         self._words = word_count
         self._sort = sort
+
+        self._build_vocabulary()
 
 
     def generate_word_index(self):
@@ -60,6 +62,10 @@ class WordIndex:
         logger.info('Vocabulary words loaded: ' + str(len(self.raw_word_list)))
         self.filtered_list = [i for i in filter(self.word_filter, self.raw_word_list)]
         logger.info('Filtered word list length: ' + str(len(self.filtered_list)))
+        self._max_records = len(self.filtered_list)**self._words
+        if self._length > self._max_records:
+            raise RuntimeError('Desired record count exceeds vocabulary length'
+                               ', define looser word filters or increase word counts')
 
     def _combine_words(self, l):
         return reduce((lambda x, y: x + '.' + y), l)
