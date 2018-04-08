@@ -52,7 +52,7 @@ class WordIndexGenerator:
         :return: Pandas wordindex series
         :rtype Series
         '''
-        ind = pd.DataFrame(np.random.choice(self.filtered_list, (self._length, self._words), True)).drop_duplicates()
+        ind = pd.DataFrame(np.random.choice(self._filtered_list, (self._length, self._words), True)).drop_duplicates()
         if self._sort:
             ind.sort_values(by=list(ind.columns), inplace=True)
         ind = ind.apply(self._combine_words, axis=1).reset_index(drop=True)
@@ -62,9 +62,9 @@ class WordIndexGenerator:
     def _build_vocabulary(self):
         self.raw_word_list = [i.lower() for i in words.words()]
         logger.info('Vocabulary words loaded: ' + str(len(self.raw_word_list)))
-        self.filtered_list = [i for i in filter(self.word_filter, self.raw_word_list)]
-        logger.info('Filtered word list length: ' + str(len(self.filtered_list)))
-        self._max_records = len(self.filtered_list)**self._words
+        self._filtered_list = [i for i in filter(self.word_filter, self.raw_word_list)]
+        logger.info('Filtered word list length: ' + str(len(self._filtered_list)))
+        self._max_records = len(self._filtered_list) ** self._words
         if self._length > self._max_records:
             raise RuntimeError('Desired record count exceeds vocabulary length'
                                ', define looser word filters or increase word counts')
