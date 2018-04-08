@@ -13,6 +13,7 @@ class WordIndexFilter:
 
     def set_negative_regex(self, r):
         self._negative_regex = re.compile(r)
+        return self
 
     def set_max_length(self,l):
         self._max_word_length = l
