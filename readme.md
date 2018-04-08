@@ -1,7 +1,7 @@
 # Human Word Indexes
 <subtitle>Inspired by [What3Words](https://map.what3words.com/daring.lion.race)</subtitle>
 ```python
-import WordIndexGenerator  
+from human_word_indexes import WordIndexGenerator,WordIndexFilter  
 twi = WordIndexGenerator(10)
 twi.generate_word_index()
 # ------OUTPUT------
