@@ -29,3 +29,4 @@ class WordIndexFilter:
             return False
         else:
             return True
+        
