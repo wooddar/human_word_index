@@ -15,7 +15,7 @@ from word_index.word_index_filter import WordIndexFilter
 logger = logging.getLogger(__name__)
 
 class WordIndex:
-    def __init__(self, length, word_count=3, word_filter ='default',sort=True):
+    def __init__(self, length, word_count=3, word_filter ='default',sort=True,sep='.'):
         '''
         Create an instance of a Word Index, NLTK corpuses must be installed with the nltk.download() function
 
@@ -27,6 +27,8 @@ class WordIndex:
         :type word_filter: WordIndexFilter
         :param sort: Should the word index be sorted along its words (useful for incrementally changing data)
         :type sort: bool
+        :param sep: Word separator character
+        :type sep: str
         '''
         if word_filter == 'default':
             self.word_filter = WordIndexFilter().filter_word
@@ -39,7 +41,7 @@ class WordIndex:
         self._length = length
         self._words = word_count
         self._sort = sort
-
+        self._sep = sep
         self._build_vocabulary()
 
 
@@ -68,7 +70,7 @@ class WordIndex:
                                ', define looser word filters or increase word counts')
 
     def _combine_words(self, l):
-        return reduce((lambda x, y: x + '.' + y), l)
+        return reduce((lambda x, y: x + self._sep + y), l)
 
 
 
