@@ -29,6 +29,11 @@ twi.generate_word_index()
 
 ```
 
+## Quickstart
+TODO
+- Install the nltk word corpus with `nltk.download()`
+
+
 ## Motivation
 This library allows the creation of human-memorable/legible english word indexes for 
 pandas dataframes (or other datasets) in python.
