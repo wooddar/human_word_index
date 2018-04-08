@@ -6,7 +6,7 @@ setup(
     python_requires='>=2.7',
     packages=find_packages(),
     url='https://github.com/wooddar/human_word_indexes',
-    download_url='https://github.com/wooddar/human_word_indexes/archive/0.1.tar.gz',
+    download_url='https://github.com/wooddar/human_word_indexes/archive/1.1.tar.gz',
     license='MIT',
     author='hugodarwood',
     author_email='hugodarwood@gmail.com',
