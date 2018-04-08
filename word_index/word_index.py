@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Human word indices
+Human word indexes
 
-Example
+TODO: Add vocabulary caching for large indexes
 """
 
 import logging
