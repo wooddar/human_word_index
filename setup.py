@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='human_word_indexes',
-    version='1.0',
+    version='1.1',
     python_requires='>=2.7',
     packages=find_packages(),
     url='https://github.com/wooddar/human_word_indexes',
