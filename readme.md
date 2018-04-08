@@ -1,5 +1,8 @@
 # Human Word Indexes
-<subtitle>Inspired by [What3Words](https://map.what3words.com/daring.lion.race)</subtitle>
+#### Inspired by [What3Words](https://map.what3words.com/daring.lion.race)
+This library allows the creation of human-memorable/legible english word indexes for 
+pandas dataframes (or other datasets) in python.
+
 ```python
 from human_word_indexes import WordIndexGenerator,WordIndexFilter  
 twi = WordIndexGenerator(10)
@@ -32,10 +35,5 @@ twi.generate_word_index()
 ## Quickstart
 - Run `pip install human_word_indexes`
 - Install the nltk word corpuses with `nltk.download()`
-
-
-## Motivation
-This library allows the creation of human-memorable/legible english word indexes for 
-pandas dataframes (or other datasets) in python.
 
 
